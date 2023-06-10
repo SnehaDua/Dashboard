@@ -1,0 +1,15 @@
+.wrapperGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px; /* optional, for some space between the grid cells */
+    margin: 15px;
+
+    &-item {
+        background-color: lightgrey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // font-size: 1.5em;
+    }
+}
