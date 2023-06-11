@@ -46,13 +46,7 @@ const DonutChart = () => {
             datasets: [
               {
                 data: Object.values(data),
-                backgroundColor: [
-                  "#FF6384",
-                  "#36A2EB",
-                  "#FFCE56",
-                  "#E7E9ED",
-                  "#4BC0C0",
-                ],
+                backgroundColor:  ["#93DADB", "#EFF6FE", "#ABDBD6", "#76CDC4", "#76CDC4"],
               },
             ],
           },
@@ -75,7 +69,7 @@ const DonutChart = () => {
                   size: 15, // Sets the font size
                   weight: "bold", // Sets the font weight
                 },
-                color: ["#FF6384", "#36A2EB", "#FFCE56", "#E7E9ED", "#4BC0C0"],
+                color: ["#93DADB", "#EFF6FE", "#ABDBD6", "#76CDC4", "#76CDC4"],
                 align: "end",
                 anchor: "end",
                 offset: 5,

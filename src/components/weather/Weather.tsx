@@ -28,13 +28,13 @@ const WeatherContent: React.FC<IWeatherProps> = ({
       <div className="weather__current">
         <div className="weather__current__item">
           <div>{cityName}</div>
-          <div className="weather__current__item--bold">{temperature}&deg;</div>
+          <div className="weather__current__item--bold bright">{temperature}&deg;</div>
           <div>{date}</div>
         </div>
         <span>
           <WeatherIcon
             weatherCondition={weatherCondition}
-            tempClassName="weather__current__icon"
+            tempClassName="weather__current__icon bright"
           />
         </span>
       </div>
@@ -45,12 +45,12 @@ const WeatherContent: React.FC<IWeatherProps> = ({
           <div>Wind</div>
           <div>Tomorrow</div>
         </div>
-        <div className="weather__details__item weather__details__item--bold">
+        <div className="weather__details__item weather__details__item--bold bright">
           <div>{humidity}%</div>
           <div>{chanceOfRain}%</div>
-          <div>{wind} km/h</div>
+          <div>{wind} kmh</div>
           <div>
-            {tomorrowTemp} &deg;
+            {tomorrowTemp}&deg;
             <span className="weather__details__item__icon">
               <WeatherIcon weatherCondition="sunny" />
             </span>

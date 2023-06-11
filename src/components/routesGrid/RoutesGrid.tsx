@@ -33,8 +33,8 @@ const RoutesGrid = ({
         <div className={`circleIcon-${delayType}`}>
           <FaCircle />
         </div>
-        <div className="largerText">{routeName}</div>
-        <div className="distance">{distance}km</div>
+        <div className="largerText bright">{routeName}</div>
+        <div className="distance">{distance}  km</div>
       </div>
       <div className="routesInnerGrid smallerText">
         <div className="arrowIcon">
@@ -44,8 +44,8 @@ const RoutesGrid = ({
           <div>{startingPoint}</div>
           <div>{endPoint}</div>
         </div>
-        <div className="delay">
-          <span className="largerText">{delayTime}</span>mins
+        <div className="delay bright">
+          <span className="largerText ">{delayTime} </span> mins
         </div>
       </div>
     </div>
