@@ -13,7 +13,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <WeatherContent />
       <Accordion
-        headerTitle="Delayed Routes"
+        headerTitle="DELAYED ROUTES"
         contentChildren={
           <>
             {mockRoutes.map((route) => (
@@ -30,7 +30,7 @@ const Sidebar = () => {
         }
       />
       <Accordion
-        headerTitle="Ramp Chart"
+        headerTitle="RAMP CHART"
         contentChildren={
           <div>
             <DonutChart />

@@ -47,16 +47,17 @@ const DonutChart = () => {
               {
                 data: Object.values(data),
                 backgroundColor:  ["#93DADB", "#EFF6FE", "#ABDBD6", "#76CDC4", "#76CDC4"],
+                borderWidth:0,
               },
             ],
           },
           options: {
             layout: {
               padding: {
-                left: 50, // Padding for left side
-                right: 50, // Padding for right side
-                top: 50, // Padding for top
-                bottom: 50, // Padding for bottom
+                left: 40, 
+                right: 40, 
+                top: 40, 
+                bottom: 40, 
               },
             },
             plugins: {
@@ -66,13 +67,14 @@ const DonutChart = () => {
                   return percentage;
                 },
                 font: {
-                  size: 15, // Sets the font size
-                  weight: "bold", // Sets the font weight
+                  size: 15, 
+                  weight: "bold", 
                 },
                 color: ["#93DADB", "#EFF6FE", "#ABDBD6", "#76CDC4", "#76CDC4"],
                 align: "end",
                 anchor: "end",
                 offset: 5,
+                
               },
             },
             cutout: "70%",
