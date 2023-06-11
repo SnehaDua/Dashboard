@@ -1,15 +1,41 @@
-.wrapperGrid {
+.weather {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 5px; /* optional, for some space between the grid cells */
+    grid-template-rows: 1fr 1fr;
+    // gap: 5px;
     margin: 15px;
 
-    &-item {
-        background-color: lightgrey;
-        display: flex;
-        justify-content: center;
+    &__current {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
         align-items: center;
-        // font-size: 1.5em;
+        grid-gap: 10px;
+        &__item {
+            text-align: center;
+            &--bold {
+                font-size: xx-large;
+                font-weight: 600;
+            }
+        }
+        &__icon {
+            width: 80%;
+            height: 80%;
+        }
+    }
+    &__details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        align-items: center;
+        padding: 0 20px;
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            &--bold{
+                font-size: larger;
+                font-weight: 600;
+            }
+        }
     }
 }

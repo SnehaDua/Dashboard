@@ -14,23 +14,25 @@ interface WeatherIconProps {
     | "rainy"
     | "cloudSun"
     | "cloudSunRain"
-    | "heavyShowers";
+    | "heavyShowers"
+    | string;
+  tempClassName?: string;
 }
 
-const WeatherIcon = ({ weatherCondition }: WeatherIconProps) => {
+const WeatherIcon = ({ weatherCondition, tempClassName }: WeatherIconProps) => {
   switch (weatherCondition) {
     case "sunny":
-      return <FaSun />;
+      return <FaSun className={tempClassName} />;
     case "cloudy":
-      return <FaCloud />;
+      return <FaCloud className={tempClassName} />;
     case "rainy":
-      return <FaCloudRain />;
+      return <FaCloudRain className={tempClassName} />;
     case "cloudSun":
-      return <FaCloudSun />;
+      return <FaCloudSun className={tempClassName} />;
     case "cloudSunRain":
-      return <FaCloudSunRain />;
+      return <FaCloudSunRain className={tempClassName} />;
     case "heavyShowers":
-      return <FaCloudShowersHeavy />;
+      return <FaCloudShowersHeavy className={tempClassName} />;
     default:
       return <FaSun />;
   }

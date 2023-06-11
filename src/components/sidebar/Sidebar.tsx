@@ -6,6 +6,7 @@ import RoutesGrid from "../routesGrid/RoutesGrid";
 
 import { mockRoutes } from "../../api/routesData";
 import WeatherContent from "../weather/Weather";
+// import { weatherData } from "../../api/weatherData";
 
 const Sidebar = () => {
   return (

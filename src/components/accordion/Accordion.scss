@@ -1,32 +1,66 @@
-.flexSettings {
+// .flexSettings {
+//     padding: 5px;
+//     border: 2px solid darkgrey;
+//     margin: 15px;
+// }
+
+// .headingTitle {
+//     font-size: large;
+//     padding: 5px;
+//     display: flex;
+
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//     border-bottom: 2px solid lightgrey;
+//     &.hide {
+//         border-bottom: none;
+//     }
+// }
+
+// .contentChildren {
+//     opacity: 1;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 15px;
+//     margin: 15px;
+//     &.hide {
+//         display: none;
+//         transition: opacity 1s ease-out;
+//         opacity: 0;
+//     }
+// }
+
+.accordion {
     padding: 5px;
     border: 2px solid darkgrey;
     margin: 15px;
 }
 
-.headingTitle {
+.accordion__header {
     font-size: large;
     padding: 5px;
     display: flex;
-
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid lightgrey;
-    &.hide {
-        border-bottom: none;
+    border-bottom: none;
+
+    &--active {
+        border-bottom: 2px solid lightgrey;
     }
 }
 
-.contentChildren {
+.accordion__content {
     opacity: 1;
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin: 15px;
-    &.hide {
+    transition: opacity 1s ease-out;
+
+    &--hidden {
         display: none;
-        transition: opacity 1s ease-out;
         opacity: 0;
     }
 }
