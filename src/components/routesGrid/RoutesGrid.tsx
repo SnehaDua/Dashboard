@@ -30,11 +30,11 @@ const RoutesGrid = ({
   return (
     <div className="routesOuterGrid">
       <div className="routesInnerGrid smallerText">
-        <div className={`circleIcon-${delayType}`}>
+        <div className={`circleIcon-${delayType}`} data-testid="delay-circle">
           <FaCircle />
         </div>
         <div className="largerText bright">{routeName}</div>
-        <div className="distance">{distance}  km</div>
+        <div className="distance">{distance} km</div>
       </div>
       <div className="routesInnerGrid smallerText">
         <div className="arrowIcon">

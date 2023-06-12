@@ -3,9 +3,9 @@ export type Ramp = {
   algorithm: string;
 };
 
-function getRampAlgorithms(onUpdate: (ramps: Ramp[]) => void): void {
+const calculateRamps = (onUpdate: (ramps: Ramp[]) => void) => {
   const count = 50;
-  setInterval(() => {
+  {
     const ramps: Ramp[] = [];
     for (let i = 0; i < count; i++) {
       ramps.push({
@@ -20,7 +20,14 @@ function getRampAlgorithms(onUpdate: (ramps: Ramp[]) => void): void {
       });
     }
     onUpdate(ramps);
-  }, 5000);
+  }
+}
+
+function getRampAlgorithms(onUpdate: (ramps: Ramp[]) => void): void {
+
+  calculateRamps(onUpdate)
+  setInterval(() => calculateRamps(onUpdate), 5000);
+  
 }
 
 export default getRampAlgorithms;

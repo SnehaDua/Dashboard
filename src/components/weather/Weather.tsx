@@ -28,15 +28,16 @@ const WeatherContent: React.FC<IWeatherProps> = ({
       <div className="weather__current">
         <div className="weather__current__item">
           <div>{cityName}</div>
-          <div className="weather__current__item--bold bright">{temperature}&deg;</div>
+          <div className="weather__current__item--bold bright">
+            {temperature}&deg;
+          </div>
           <div>{date}</div>
         </div>
-        <span>
-          <WeatherIcon
-            weatherCondition={weatherCondition}
-            tempClassName="weather__current__icon bright"
-          />
-        </span>
+
+        <WeatherIcon
+          weatherCondition={weatherCondition}
+          tempClassName="weather__current__icon bright"
+        />
       </div>
       <div className="weather__details">
         <div className="weather__details__item">

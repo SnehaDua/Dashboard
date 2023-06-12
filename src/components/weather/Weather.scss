@@ -1,7 +1,6 @@
 .weather {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    // gap: 5px;
     margin: 15px;
 
     &__current {
@@ -10,16 +9,16 @@
         justify-items: center;
         align-items: center;
         grid-gap: 10px;
+        &__icon {
+            width: 80%;
+            height: 80%;
+        }
         &__item {
             text-align: center;
             &--bold {
                 font-size: xx-large;
                 font-weight: 600;
             }
-        }
-        &__icon {
-            width: 80%;
-            height: 80%;
         }
     }
     &__details {
@@ -32,7 +31,8 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            &--bold{
+            line-height: 1.5rem;
+            &--bold {
                 font-size: larger;
                 font-weight: 600;
             }
