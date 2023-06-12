@@ -1,14 +1,14 @@
 .weather {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    margin: 15px;
+    margin: 0.9375rem;
 
     &__current {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
         align-items: center;
-        grid-gap: 10px;
+        grid-gap: 0.625rem;
         &__icon {
             width: 80%;
             height: 80%;
@@ -24,9 +24,9 @@
     &__details {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 30px;
+        grid-gap: 1.875rem;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 1.25rem;
         &__item {
             display: flex;
             flex-direction: column;

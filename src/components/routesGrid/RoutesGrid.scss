@@ -1,13 +1,14 @@
+@import '../../assets/Variables.scss';
 .routesOuterGrid {
     display: flex;
     flex-direction: column;
-    border-bottom: 0.5px solid #222935;
-    gap: 1px;
+    border-bottom: 0.0313rem solid $grey2;
+    gap: 0.0625rem;
 }
 
 .routesInnerGrid {
-    grid-gap: 6px;
-    padding: 5px;
+    grid-gap: 0.375rem;
+    padding: 0.3125rem;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: end;
@@ -24,15 +25,15 @@
     }
     .circleIcon {
         &-high {
-            color: red;
+            color: $red;
         }
         &-low {
-            color: yellow;
+            color: $yellow;
         }
     }
     .arrowIcon {
-        font-size: 20px;
+        font-size: 1.25rem;
         transform: scaleY(1.5);
-        color: grey;
+        color: $grey1;
     }
 }

@@ -1,10 +1,11 @@
+@import '../../assets/Variables.scss';
 .sidebar {
     width: 25%;
-    border: 2px solid  DarkGrey;
-    padding: 5px;
-    background-color: #0B0B0D;
-    color: #707177;
+    border: 0.0313rem solid  $grey1;
+    padding: 0.3125rem;
+    background-color: $black1;
+    color: $grey1;
 }
 .bright{
-    color: #b0b6b0;
+    color: $white1;
 }
