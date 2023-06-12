@@ -13,6 +13,13 @@ const DonutChart = () => {
   );
   const [data, setData] = useState<{ [key: string]: number }>({});
   const [total, setTotal] = useState<number>(0);
+  const ALGORITHM_ORDER = [
+    "Algorithm 1",
+    "Algorithm 2",
+    "Algorithm 3",
+    "Algorithm 4",
+    "Algorithm 5",
+  ];
 
   useEffect(() => {
     getRampAlgorithms((ramps: Ramp[]) => {
@@ -32,6 +39,9 @@ const DonutChart = () => {
   }, []);
 
   useEffect(() => {
+    const uiLabels = [...ALGORITHM_ORDER];
+    const uiData = ALGORITHM_ORDER.map((algorithm) => data[algorithm] || 0);
+
     if (chartRef.current) {
       const ctx = chartRef.current.getContext("2d");
 
@@ -41,10 +51,10 @@ const DonutChart = () => {
             const newChart = new Chart(ctx, {
               type: "doughnut",
               data: {
-                labels: Object.values(data),
+                labels: uiLabels,
                 datasets: [
                   {
-                    data: Object.values(data),
+                    data: uiData,
                     backgroundColor: [
                       "#93DADB",
                       "#EFF6FE",
@@ -93,12 +103,13 @@ const DonutChart = () => {
             chartInstance.current = newChart;
           }
         } else {
-          chartInstance.current.data.labels = Object.keys(data);
-          chartInstance.current.data.datasets[0].data = Object.values(data);
+          chartInstance.current.data.labels = uiLabels;
+          chartInstance.current.data.datasets[0].data = uiData;
           chartInstance.current.update();
         }
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, total]);
 
   return <canvas ref={chartRef} />;

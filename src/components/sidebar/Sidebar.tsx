@@ -32,7 +32,7 @@ const Sidebar = () => {
       <Accordion
         headerTitle="RAMP CHART"
         contentChildren={
-          <div>
+          <div className="rampChart--centralised">
             <DonutChart />
           </div>
         }

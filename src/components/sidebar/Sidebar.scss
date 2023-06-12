@@ -9,3 +9,21 @@
 .bright{
     color: $white1;
 }
+
+
+@media only screen and (max-width: $md) {
+    .sidebar {
+      width: 50%;
+    }
+}
+
+@media only screen and (max-width: $sm) {
+    .sidebar {
+      width: 100%;
+    }
+}
+
+.rampChart--centralised{
+    display:flex;
+    justify-content: center;
+}
