@@ -60,7 +60,7 @@ const DonutChart = () => {
                       "#EFF6FE",
                       "#ABDBD6",
                       "#76CDC4",
-                      "#76CDC4",
+                      "#5DC8BE",
                     ],
                     borderWidth: 0,
                   },
@@ -90,7 +90,7 @@ const DonutChart = () => {
                       "#EFF6FE",
                       "#ABDBD6",
                       "#76CDC4",
-                      "#76CDC4",
+                      "#5DC8BE",
                     ],
                     align: "end",
                     anchor: "end",
@@ -110,7 +110,7 @@ const DonutChart = () => {
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data, total]);
+  }, [data]);
 
   return <canvas ref={chartRef} />;
 };

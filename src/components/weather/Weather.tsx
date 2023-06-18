@@ -1,7 +1,8 @@
 import React from "react";
 import "./Weather.scss";
 import WeatherIcon from "./WeatherIcon";
-
+import CurrentDateTime from "../currentDateTime/CurrentDateTime";
+// const currentDate = new Date();
 interface IWeatherProps {
   cityName?: string;
   temperature?: number;
@@ -16,7 +17,8 @@ interface IWeatherProps {
 const WeatherContent: React.FC<IWeatherProps> = ({
   cityName = "Melbourne",
   temperature = 32,
-  date = "Date",
+  date= <CurrentDateTime/>,
+  // date=currentDate.toLocaleString("en-US", {weekday: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'}),
   humidity = 78,
   chanceOfRain = 34,
   wind = 21,
